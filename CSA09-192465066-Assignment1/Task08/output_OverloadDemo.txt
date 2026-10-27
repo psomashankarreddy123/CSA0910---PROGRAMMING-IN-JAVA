@@ -1,0 +1,8 @@
+declared=Vehicle actual=TwoWheeler fee(130)=30.0
+declared=Vehicle actual=Car fee(130)=90.0
+declared=Vehicle actual=ElectricCar fee(130)=90.0
+Overload (int)            : 90.0
+Overload (LocalTime,Local): 90.0
+instanceof chain rate for TwoWheeler = 10.0
+instanceof chain rate for Car = 30.0
+instanceof chain rate for ElectricCar = 30.0

@@ -1,0 +1,6 @@
+TN01AB1111 minutes=130
+WRONG  (minutes/60)*rate           = 60.0
+WRONG  (double)(minutes/60)*rate   = 60.0
+RIGHT  ((minutes+59)/60)*rate      = 90.0
+Floors=3 total slots=105 slots[1].length=35
+1-D index of floor 1 slot 5 = 25

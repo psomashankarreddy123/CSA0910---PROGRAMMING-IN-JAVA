@@ -1,0 +1,30 @@
+=== Normal operation ===
+ticket numbers unique/increasing                 expected=true       actual=true       PASS
+2W 130 min                                       expected=30.0       actual=30.0       PASS
+Car 130 min                                      expected=90.0       actual=90.0       PASS
+EV 130 min + 10 kWh                              expected=210.0      actual=210.0      PASS
+=== Boundary ===
+last slot used -> next entry rejected            expected=IllegalStateException actual=IllegalStateException PASS
+0 minutes                                        expected=0.0        actual=0.0        PASS
+60 min (slab boundary)                           expected=30.0       actual=30.0       PASS
+61 min (just over)                               expected=60.0       actual=60.0       PASS
+integer-division trap 61/60*30 would give        expected=30.0       actual=30.0       PASS
+=== Invalid ===
+unknown type                                     expected=IllegalArgumentException actual=IllegalArgumentException PASS
+duplicate registration                           expected=IllegalStateException actual=IllegalStateException PASS
+exit without ticket                              expected=NoSuchElementException actual=NoSuchElementException PASS
+negative duration                                expected=IllegalArgumentException actual=IllegalArgumentException PASS
+slot freed after exit can be reused              expected=ok         actual=ok         PASS
+=== Task 12: new categories ===
+E-bike flat fee (any duration)                   expected=15.0       actual=15.0       PASS
+Van 130 min at 10AM (double car rate)            expected=180.0      actual=180.0      PASS
+Van 130 min at 8PM (normal car rate)             expected=90.0       actual=90.0       PASS
+Visitor one-day pass car                         expected=0.0        actual=0.0        PASS
+Monthly pass EV, charging still billed           expected=120.0      actual=120.0      PASS
+=== Hand-calculated day scenario ===
+Day total (hand: 10+90+90+15+120+0)              expected=325.0      actual=325.0      PASS
+TOTAL PASS=20 FAIL=0
+=== Benchmark: find ticket on exit (n parked) ===
+n=1000    array scan=20456    ns  ArrayList.indexOf=13515    ns  HashMap.get=1403  ns  (sink 1)
+n=10000   array scan=77973    ns  ArrayList.indexOf=30506    ns  HashMap.get=98    ns  (sink 1)
+n=100000  array scan=438833   ns  ArrayList.indexOf=359494   ns  HashMap.get=2407  ns  (sink 1)

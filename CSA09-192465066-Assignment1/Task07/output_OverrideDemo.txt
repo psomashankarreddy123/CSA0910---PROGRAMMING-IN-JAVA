@@ -1,0 +1,5 @@
+Car[TN02B2] equals Car[TN02B2] -> true, same hashCode -> true
+HashSet contains duplicate reg? true
+Overriding : TwoWheeler 130min = 30.0, Car = 90.0
+Switch alt : 2W = 30.0, CAR = 90.0
+Car[TN02B2]

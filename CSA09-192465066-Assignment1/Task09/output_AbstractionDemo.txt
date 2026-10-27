@@ -1,0 +1,4 @@
+Amount due        : 210.0
+Peak charging 10kWh: 180.0 (default method)
+isValidKwh(-5)     : false (static interface method)
+One object, many roles: true true true

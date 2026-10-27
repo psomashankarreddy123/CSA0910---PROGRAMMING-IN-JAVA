@@ -1,0 +1,6 @@
+allocate -> [0, 0]
+fee -> 90.0
+Rejected: duration must be >= 0
+release invalid slot -> false
+Integer 1000 == : false   equals: true
+Integer 100  == : true    (cache -128..127)

@@ -1,0 +1,3 @@
+Parallel array find TN03C3 -> index 2 (O(n) scan)
+Object HashMap find TN03C3 -> EV (O(1) average)
+Business rule: duplicate regNo allowed? no - key already present

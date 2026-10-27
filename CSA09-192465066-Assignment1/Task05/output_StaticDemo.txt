@@ -1,0 +1,5 @@
+Static counter: 1, 2, 3
+Instance counter north=1 south=1  <- duplicate ticket number 1!
+Static block loaded rates: {2W=10.0, CAR=30.0}
+After modify(): [0, 9] (state changed, reference not reassigned)
+Ticket object unreachable after t=null (GC eligible)

@@ -1,0 +1,6 @@
+Ticket#1001 TN01A1 [0,0] @600
+Ticket#1002 TN02B2 [0,1] @540
+Ticket#1001 TN01A1 [0,0] @600  (copy, same ticket number)
+a == c ? false   (different heap objects)
+Ticket#1003 TN03C3 [1,0] @540
+Rejected: regNo required

@@ -1,0 +1,6 @@
+Creating new ElectricCar("TN03C3") ...
+3. Vehicle constructor (regNo=TN03C3)
+4. Car constructor
+5. ElectricCar constructor
+fee(130)=90.0 charging(10)=120.0
+e instanceof Car: true, Vehicle: true, Chargeable: true
